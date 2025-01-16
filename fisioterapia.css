@@ -1,85 +1,91 @@
-* {
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f4f4f9;
-    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 400px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.icons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    padding: 0 10px;
-}
-
-.icon {
-    width: 25px;
-    height: 25px;
-}
-
-.user-info {
-    margin-top: 5px;
-}
-
-main {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.card {
-    text-align: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .app-container {
+    width: 360px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  header {
+    text-align: center;
     padding: 15px;
-    width: 100%;
-}
-
-.options {
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.button {
-    text-decoration: none;
-    background-color: #007bff;
+    background: #007bff;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .user-name {
+    margin-top: 4px;
+    font-size: 16px;
+  }
+  
+  main {
+    padding: 15px;
+  }
+  
+  .physiotherapy-section {
+    text-align: center;
+  }
+  
+  .physiotherapy-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .physiotherapy-section p {
     font-size: 14px;
+    color: #555;
+    margin-bottom: 16px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .button {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 120px;
+    text-align: center;
     transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
+  }
+  
+  .button:hover {
+    background-color: #005bb5;
+  }
+  
