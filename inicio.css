@@ -73,3 +73,6 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
 }
+.header-ul li {
+    display: inline-block;
+}
