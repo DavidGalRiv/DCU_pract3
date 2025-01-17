@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="fisioterapia.css" rel="stylesheet" type="text/css">
-  <title>SaludTotal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fisioterapia.css" rel="stylesheet" type="text/css">
+    <title>Fisioterapia</title>
 </head>
 <body>
-  <div class="app-container">
-    <header>
-      <div class="icon-container">
-        <img src="Fotos\Logo_Ajustes.png" alt="Configuración" class="icon">
-        <img src="Fotos\Paciente.png" alt="Perfil" class="icon">
-        <img src="Fotos\Logo_DCU.png" alt="Salud" class="icon">
-      </div>
-      <h1>SaludTotal</h1>
-      <p class="user-name">Juan Blanco Ruiz</p>
-    </header>
-    
-    <main>
-      <section class="physiotherapy-section">
-        <h2>FISIOTERAPIA</h2>
-        <p>Ana Valentín López | 12 de abril, 13:10</p>
+    <div class="app-container">
+        <!-- Encabezado con íconos -->
+        <header>
+            <div class="icon-container">
+                <a href="ajustes.html"><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" class="icon"></a>
+                <h1>SaludTotal</h1>
+                <a href="inicio.html"><img src="Fotos/Logo_DCU.png" alt="Inicio" class="icon"></a>
+            </div>
+        </header>
+        
+        <!-- Contenido principal -->
+        <main>
+            <div class="physiotherapy-section">
+              <div class="profile">
+                <img src="Fotos/Paciente.png" alt="Perfil">
+                <div class="profile-info">Juan Blanco Ruiz</div>
+              </div>
+                <h2>Fisioterapia</h2>
+                <p>Detalles de la cita:</p>
+                <p id="appointment-date">Fecha: <span id="selected-date"></span></p>
+                <div class="button-container">
+                    <a href="tratamiento.html" class="button">Tratamiento</a>
+                    <a href="ejercicios.html" class="button">Ejercicios</a>
+                </div>
+            </div>
+        </main>
+    </div>
+ 
 
-        <div class="button-container">
-          <a href="tratamiento.html" class="button">Tratamiento</a>
-          <a href="ejercicios.html" class="button">Ejercicios</a>
-        </div>
-      </section>
-    </main>
-  </div>
+    <script>
+        // Obtener la fecha de la URL y mostrarla
+        const urlParams = new URLSearchParams(window.location.search);
+        const date = urlParams.get('date');
+        document.getElementById('selected-date').textContent = date || 'No se seleccionó ninguna fecha';
+    </script>
 </body>
 </html>

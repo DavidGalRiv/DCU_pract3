@@ -20,11 +20,9 @@
                     <a href=""><img src="Fotos/Logo_DCU.png" alt="App" height="40" width="40"></a>
                 </li>
             </ul>
-            
-
         </div>
         <div class="profile">
-            <img src="https://via.placeholder.com/50" alt="Perfil">
+            <img src="Fotos/Paciente.png" alt="Perfil">
             <div class="profile-info">Juan Blanco Ruiz</div>
         </div>
         <div class="calendar">
@@ -54,17 +52,24 @@
             </table>
         </div>
         <div class="appointments">
-            <div class="appointment">
+            <div class="appointment" onclick="goToPhysiotherapy('14 Julio 2024 - 10:30')">
                 <strong>FISIOTERAPIA</strong><br>
-                Ana Mart&iacute;nez L&oacute;pez<br>
+                Ana Martínez López<br>
                 14 Julio 2024 - 10:30
             </div>
-            <div class="appointment">
+            <div class="appointment" onclick="goToPhysiotherapy('28 Julio 2024 - 10:30')">
                 <strong>FISIOTERAPIA</strong><br>
-                Ana Mart&iacute;nez L&oacute;pez<br>
+                Ana Martínez López<br>
                 28 Julio 2024 - 10:30
             </div>
         </div>
     </div>
+
+    <script>
+        function goToPhysiotherapy(date) {
+            // Redirigir a la página de fisioterapia con la fecha seleccionada en la URL
+            window.location.href = `fisioterapia.html?date=${encodeURIComponent(date)}`;
+        }
+    </script>
 </body>
 </html>
