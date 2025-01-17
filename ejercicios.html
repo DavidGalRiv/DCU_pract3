@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicios.css">
+    <title>SaludTotal - Ejercicios</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Cabecera -->
+        <header>
+            <div class="icon-container">
+                <a href="ajustes.html"><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" class="icon"></a>
+                <h1>SaludTotal</h1>
+                <a href="inicio.html"><img src="Fotos/Logo_DCU.png" alt="Inicio" class="icon"></a>
+            </div>
+        </header>
+        
+        <!-- Contenido principal -->
+        <main>
+            <div class="profile">
+                <img src="Fotos/Medico.png" alt="Perfil">
+                <div class="profile-info">Juan Blanco Ruiz</div>
+              </div>
+            <!-- Recuadro de ejercicio -->
+            <div class="exercise-card">
+                <h2>Ejercicios</h2>
+                <div class="exercise-content">
+                    <img src="Fotos/Ejercicio1.png" alt="Ejercicio" class="exercise-image">
+                    <p>Realiza este ejercicio durante 10 minutos para fortalecer tus músculos. Mantén la postura adecuada.</p>
+                </div>
+            </div>
+        
+            <!-- Recuadro "no hay más ejercicios" -->
+            <div class="no-exercises-card">
+                <p>No hay más ejercicios</p>
+            </div>
+            <button class="done-button" onclick="volverAFisioterapia()">Hecho</button>
+        </main>
+        
+    </div>
+
+    <!-- Script para volver a fisioterapia -->
+    <script>
+        function volverAFisioterapia() {
+            window.location.href = "fisioterapia.html";
+        }
+    </script>
+</body>
+</html>
