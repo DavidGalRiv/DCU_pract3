@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="fisioterapia.css" rel="stylesheet" type="text/css">
     <title>Fisioterapia</title>
+    <script>
+        // Obtener la fecha de la URL y mostrarla
+        const urlParams = new URLSearchParams(window.location.search);
+        const date = urlParams.get('date');
+        document.getElementById('selected-date').textContent = date || 'No se seleccionó ninguna fecha';
+    </script>
 </head>
 <body>
     <div class="app-container">
@@ -36,13 +42,5 @@
             </div>
         </main>
     </div>
- 
-
-    <script>
-        // Obtener la fecha de la URL y mostrarla
-        const urlParams = new URLSearchParams(window.location.search);
-        const date = urlParams.get('date');
-        document.getElementById('selected-date').textContent = date || 'No se seleccionó ninguna fecha';
-    </script>
 </body>
 </html>

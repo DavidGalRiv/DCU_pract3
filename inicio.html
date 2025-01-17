@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="inicio.css" rel="stylesheet" type="text/css">
     <title>SaludTotal - Agenda</title>
+    <script>
+        function goToPhysiotherapy(date) {
+            // Redirigir a la página de fisioterapia con la fecha seleccionada en la URL
+            window.location.href = `fisioterapia.html?date=${encodeURIComponent(date)}`;
+        }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <ul class="header-ul">
-                <li>
-                    <a href=""><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" height="40" width="40"></a>
-                </li>
-                <li>
-                    <h1>SaludTotal</h1>
-                </li>
-                <li>
-                    <a href=""><img src="Fotos/Logo_DCU.png" alt="App" height="40" width="40"></a>
-                </li>
-            </ul>
-        </div>
+    <div class="app-container">
+        <!-- Cabecera -->
+         <header>
+            <div class="icon-container">
+                <a href="ajustes.html"><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" class="icon"></a>
+                <h1>SaludTotal</h1>
+                <a href="inicio.html"><img src="Fotos/Logo_DCU.png" alt="Inicio" class="icon"></a>
+            </div>
+        </header>
+
+        <!-- Contenido principal -->
         <div class="profile">
             <img src="Fotos/Medico.png" alt="Perfil">
             <div class="profile-info">Juan Blanco Ruiz</div>
@@ -64,12 +67,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function goToPhysiotherapy(date) {
-            // Redirigir a la página de fisioterapia con la fecha seleccionada en la URL
-            window.location.href = `fisioterapia.html?date=${encodeURIComponent(date)}`;
-        }
-    </script>
 </body>
 </html>
