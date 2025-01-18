@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="login.css" rel="stylesheet" type="text/css">
+    <title>SaludTotal - Iniciar Sesión</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Encabezado con íconos -->
+        <header>
+            <div class="icon-container">
+                <a href="ajustes.html"><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" class="icon"></a>
+                <h1>SaludTotal</h1>
+                <a href="inicio.html"><img src="Fotos/Logo_DCU.png" alt="Inicio" class="icon"></a>
+            </div>
+        </header>
+        
+        <!-- Contenido principal -->
+        <main>
+            <div class="login-section">
+                <h2>Bienvenido a Salud Total</h2>
+                <div class="tab-container">
+                    <button class="active">Paciente</button>
+                    <button>Doctor</button>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" placeholder="nombre@servicio.extension">
+                    </div>
+                    <div class="form-group password">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" placeholder="">
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#">Has olvidado tu contraseña?</a>
+                    </div>
+                    <div class="button-container" onsubmit=CheckAndSend()>
+                        <button type="submit" class="button">Iniciar sesión</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Aquí puedes agregar lógica para manejar la selección de las pestañas Paciente/Doctor
+        const tabs = document.querySelectorAll('.tab-container button');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        function CheckAndSend(){
+            
+        }
+    </script>
+</body>
+</html>
