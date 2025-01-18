@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="inicio.css" rel="stylesheet" type="text/css">
     <title>SaludTotal - Agenda</title>
-    <script>
-        function goToPhysiotherapy(date) {
-            // Redirigir a la página de fisioterapia con la fecha seleccionada en la URL
-            window.location.href = `fisioterapia.html?date=${encodeURIComponent(date)}`;
-        }
-    </script>
 </head>
 <body>
     <div class="app-container">
@@ -67,5 +61,12 @@
             </div>
         </div>
     </div>
+
+ <script>
+        function goToPhysiotherapy(date) {
+            // Redirigir a la página de fisioterapia con la fecha seleccionada en la URL
+            window.location.href = `fisioterapia.html?date=${encodeURIComponent(date)}`;
+        }
+    </script>
 </body>
 </html>

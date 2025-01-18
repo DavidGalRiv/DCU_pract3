@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="fisioterapia.css" rel="stylesheet" type="text/css">
     <title>Fisioterapia</title>
-    <script>
-        // Obtener la fecha de la URL y mostrarla
-        const urlParams = new URLSearchParams(window.location.search);
-        const date = urlParams.get('date');
-        document.getElementById('selected-date').textContent = date || 'No se seleccionó ninguna fecha';
-    </script>
 </head>
 <body>
     <div class="app-container">
@@ -33,14 +27,35 @@
                 <h2>Fisioterapia</h2>
                 <p>Detalles de la cita:</p>
                 <br>Ana Martínez López<br>
-                <br id="appointment-date">Fecha: <span id="selected-date"></span><br>
-                <br>
+                <p id="appointment-date">Fecha: <span id="selected-date"></span></p>
                 <div class="button-container">
                     <a href="tratamiento.html" class="button">Tratamiento</a>
-                    <a href="ejercicios.html" class="button">Ejercicios</a>
+                    <a id="ir-ejercicios" href="ejercicios.html" class="button">Ejercicios</a>
+                </div>
+                <div class="button-container-volver">
+                    <a id="volver-inicio" href="inicio.html" class="button">Volver</a>
                 </div>
             </div>
         </main>
     </div>
+
+    <script>
+        // Obtener la fecha desde la URL
+        const params = new URLSearchParams(window.location.search);
+        const date = params.get('date');
+
+        // Mostrar la fecha en la página
+        if (date) {
+            document.getElementById('selected-date').textContent = date;
+        } else {
+            document.getElementById('selected-date').textContent = 'No se seleccionó ninguna fecha';
+        }
+
+        // Añadir la variable date al enlace "Ejercicios"
+        const irEjerciciosLink = document.getElementById('ir-ejercicios');
+        if (date) {
+            irEjerciciosLink.href += `?date=${encodeURIComponent(date)}`;
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="evaluar.css" rel="stylesheet" type="text/css">
+    <title>SaludTotal - Evaluar Ejercicio</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Cabecera -->
+        <header>
+            <div class="icon-container">
+                <a href="ajustes.html"><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" class="icon"></a>
+                <h1>SaludTotal</h1>
+                <a href="inicio.html"><img src="Fotos/Logo_DCU.png" alt="Inicio" class="icon"></a>
+            </div>
+        </header>
+        
+        <!-- Contenido principal -->
+        <main>
+            <div class="evaluation-card">
+                <h2>Evaluar Ejercicio</h2>
+                <p>Califica el nivel de dolor:</p>
+                <!-- Barra de evaluación -->
+                <input type="range" id="pain-level" name="pain-level" min="1" max="5" value="3">
+                <p>Valor seleccionado: <span id="pain-value">3</span></p>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="button-container">
+                <a id="volver-ejercicios" href="ejercicios.html" class="nav-button">Volver</a>
+                <a id="hecho" href="fisioterapia.html" class="nav-button done-button">Hecho</a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Leer la variable date desde la URL
+        const params = new URLSearchParams(window.location.search);
+        const date = params.get("date");
+
+        // Actualizar enlaces con la fecha
+        const volverEjerciciosLink = document.getElementById("volver-ejercicios");
+        const hechoLink = document.getElementById("hecho");
+
+        if (date) {
+            volverEjerciciosLink.href += `?date=${encodeURIComponent(date)}`;
+            hechoLink.href += `?date=${encodeURIComponent(date)}`;
+        }
+
+        // Mostrar el valor de la barra de rango
+        const painLevel = document.getElementById("pain-level");
+        const painValue = document.getElementById("pain-value");
+
+        painLevel.addEventListener("input", () => {
+            painValue.textContent = painLevel.value;
+        });
+    </script>
+</body>
+</html>

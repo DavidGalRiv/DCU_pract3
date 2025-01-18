@@ -102,3 +102,10 @@ main {
 .profile-info {
   font-size: 16px;
 }
+
+.button-container-volver {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 2%;
+}

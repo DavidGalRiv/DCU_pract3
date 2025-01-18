@@ -1,115 +1,144 @@
-/* General styles */
+/* Estilo general */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f5f5f5;
 }
 
 .app-container {
     width: 360px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
+/* Cabecera */
 header {
-    text-align: center;
-    padding: 15px;
     background: #007bff;
     color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
 }
 
 .icon-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-  }
-  
-  .icon {
-    width: 30px;
-    height: 30px;
-  }
-
-main {
-    padding: 15px;
 }
 
-/* Estilos para el recuadro de ejercicio */
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Perfil */
+.profile {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Recuadro de ejercicios */
 .exercise-card {
-    background-color: #f9f9f9;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.exercise-card h2 {
-    margin-top: 0;
-    font-size: 20px;
+    margin: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .exercise-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+    text-align: center;
 }
 
 .exercise-image {
-    width: 100px;
-    height: 100px;
+    max-width: 100%;
+    border-radius: 8px;
     margin-bottom: 10px;
 }
 
-.exercise-card p {
-    font-size: 14px;
+.exercise-card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Recuadro "no hay más ejercicios" */
+.no-exercises-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px;
+    text-align: center;
     color: #555;
 }
 
-/* Estilos para el recuadro "No hay más ejercicios" */
-.no-exercises-card {
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+/* Botones de navegación */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #777;
-    position: relative;
+    margin-top: 10px;
 }
 
-/* Estilo del botón "Hecho" */
-.done-button {
-    margin-top: 10px;
+.nav-button {
+    display: block;
+    text-align: center;
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
-    border: none;
-    border-radius: 8px;
+    text-decoration: none;
     font-size: 14px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     transition: background-color 0.3s;
+    width: 45%;
+    margin-right: 1%;
+}
+
+.nav-button:hover {
+    background-color: #005bb5;
+}
+
+.done-button {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    width: 45%;
+
 }
 
 .done-button:hover {
-    background-color: #005bb5;
+    background-color: #218838;
 }
-.profile img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  .profile-info {
-    font-size: 16px;
-  }

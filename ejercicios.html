@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="ejercicios.css" rel="stylesheet" type="text/css">
     <title>SaludTotal - Ejercicios</title>
-    <script>
-        function volverAFisioterapia() {
-            window.location.href = "fisioterapia.html";
-        }
-    </script>
 </head>
 <body>
     <div class="app-container">
@@ -24,16 +19,20 @@
         
         <!-- Contenido principal -->
         <main>
+            <!-- Información del usuario -->
             <div class="profile">
                 <img src="Fotos/Medico.png" alt="Perfil">
                 <div class="profile-info">Juan Blanco Ruiz</div>
-              </div>
+            </div>
+
             <!-- Recuadro de ejercicio -->
             <div class="exercise-card">
                 <h2>Ejercicios</h2>
                 <div class="exercise-content">
-                    <img src="Fotos/Ejercicio1.png" alt="Ejercicio" class="exercise-image">
-                    <p>Realiza este ejercicio durante 10 minutos para fortalecer tus músculos. Mantén la postura adecuada.</p>
+                    <img src="Fotos/Ejercicio_Extension.gif" alt="Ejercicio" class="exercise-image">
+                    <p>La extensión de lumbares fortalece la parte baja de la espalda. Se relaiza inclinando el torso hacia 
+                        adelante y luego extendiéndolo hasta alinear con las piernas, controlando el movimiento y activando 
+                        la zona lumbar y los glúteos</p>
                 </div>
             </div>
         
@@ -41,9 +40,30 @@
             <div class="no-exercises-card">
                 <p>No hay más ejercicios</p>
             </div>
-            <button class="done-button" onclick="volverAFisioterapia()">Hecho</button>
+
+            <!-- Botones de navegación -->
+            <div class="button-container">
+                <!-- Botón para volver a fisioterapia -->
+                <a id="volver-fisioterapia" href="fisioterapia.html" class="nav-button">Volver</a>
+                <!-- Botón para evaluar -->
+                <a id="evaluar-ejercicio" href="evaluar.html" class="nav-button done-button">Evaluar</a>
+            </div>
         </main>
-        
     </div>
+
+    <script>
+        // Leer la variable date desde la URL
+        const params = new URLSearchParams(window.location.search);
+        const date = params.get("date");
+
+        // Añadir la variable date al enlace de "Volver" y "Evaluar"
+        const volverFisioterapiaLink = document.getElementById("volver-fisioterapia");
+        const evaluarEjercicioLink = document.getElementById("evaluar-ejercicio");
+
+        if (date) {
+            volverFisioterapiaLink.href += `?date=${encodeURIComponent(date)}`;
+            evaluarEjercicioLink.href += `?date=${encodeURIComponent(date)}`;
+        }
+    </script>
 </body>
 </html>
