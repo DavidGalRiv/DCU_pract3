@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .app-container {
+    width: 360px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  header {
+    text-align: center;
+    padding: 15px;
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-info {
+    font-size: 16px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+  
+  .medication-list {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .medication {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .medication:last-child {
+    border-bottom: none;
+  }
+  
+  .no-more-medications {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #28a745;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .button:hover {
+    background-color: #218838;
+  }
