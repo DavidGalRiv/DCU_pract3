@@ -1,4 +1,3 @@
-/* Estilo general */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,7 +18,6 @@ body {
     overflow: hidden;
 }
 
-/* Cabecera */
 header {
     background: #007bff;
     color: #fff;
@@ -43,7 +41,6 @@ header h1 {
     height: 30px;
 }
 
-/* Perfil */
 .profile {
     display: flex;
     align-items: center;
@@ -62,7 +59,6 @@ header h1 {
     font-weight: bold;
 }
 
-/* Recuadro de ejercicios */
 .exercise-card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -85,9 +81,8 @@ header h1 {
 .exercise-card h2 {
     text-align: center;
     margin-bottom: 10px;
-}
+}nav-
 
-/* Recuadro "no hay más ejercicios" */
 .no-exercises-card {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -98,7 +93,6 @@ header h1 {
     color: #555;
 }
 
-/* Botones de navegación */
 .button-container {
     display: flex;
     justify-content: space-between;
@@ -107,7 +101,7 @@ header h1 {
     margin-top: 10px;
 }
 
-.nav-button {
+.button {
     display: block;
     text-align: center;
     padding: 10px 20px;

@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="app-container">
-        <!-- Encabezado -->
         <header>
             <div class="icon-container">
                 <a href="ajustes.html"><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" class="icon"></a>
@@ -17,7 +16,6 @@
             </div>
         </header>
 
-        <!-- Contenido principal -->
         <main>
             <div class="profile">
                 <img src="Fotos/Paciente.png" alt="Perfil">
@@ -38,10 +36,20 @@
                     No hay más medicamentos
                 </div>
                 <div class="button-container">
-                    <a href="inicio.html" class="button">Hecho</a>
+                    <a id="volver-fisioterapia" href="fisioterapia.html" class="nav-button">Volver</a>
+                    <a href="inicio.html" class="done-button">Hecho</a>
                 </div>
             </div>
         </main>
     </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const date = params.get("date");
+
+        const volverFisioterapiaLink = document.getElementById("volver-fisioterapia");
+        if (date) {
+            volverFisioterapiaLink.href += `?date=${encodeURIComponent(date)}`;
+        }
+    </script>
 </body>
 </html>

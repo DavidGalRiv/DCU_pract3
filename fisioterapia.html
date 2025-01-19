@@ -29,7 +29,7 @@
                 <br>Ana Martínez López<br>
                 <p id="appointment-date">Fecha: <span id="selected-date"></span></p>
                 <div class="button-container">
-                    <a href="tratamiento.html" class="button">Tratamiento</a>
+                    <a id="ir-tratamiento" href="tratamiento.html" class="button">Tratamiento</a>
                     <a id="ir-ejercicios" href="ejercicios.html" class="button">Ejercicios</a>
                 </div>
                 <div class="button-container-volver">
@@ -55,6 +55,10 @@
         const irEjerciciosLink = document.getElementById('ir-ejercicios');
         if (date) {
             irEjerciciosLink.href += `?date=${encodeURIComponent(date)}`;
+        }
+        const irTratamientoLink = document.getElementById('ir-tratamiento');
+        if (date) {
+            irTratamientoLink.href += `?date=${encodeURIComponent(date)}`;
         }
     </script>
 </body>

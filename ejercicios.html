@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="app-container">
-        <!-- Cabecera -->
         <header>
             <div class="icon-container">
                 <a href="ajustes.html"><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" class="icon"></a>
@@ -17,15 +16,12 @@
             </div>
         </header>
         
-        <!-- Contenido principal -->
         <main>
-            <!-- Información del usuario -->
             <div class="profile">
                 <img src="Fotos/Paciente.png" alt="Perfil">
                 <div class="profile-info">Juan Blanco Ruiz</div>
             </div>
 
-            <!-- Recuadro de ejercicio -->
             <div class="exercise-card">
                 <h2>Ejercicios</h2>
                 <div class="exercise-content">
@@ -38,27 +34,20 @@
                 </div>
             </div>
         
-            <!-- Recuadro "no hay más ejercicios" -->
             <div class="no-exercises-card">
                 <p>No hay más ejercicios</p>
             </div>
-
-            <!-- Botones de navegación -->
             <div class="button-container">
-                <!-- Botón para volver a fisioterapia -->
                 <a id="volver-fisioterapia" href="fisioterapia.html" class="nav-button">Volver</a>
-                <!-- Botón para evaluar -->
                 <a id="evaluar-ejercicio" href="evaluar.html" class="done-button">Evaluar</a>
             </div>
         </main>
     </div>
 
     <script>
-        // Leer la variable date desde la URL
         const params = new URLSearchParams(window.location.search);
         const date = params.get("date");
 
-        // Añadir la variable date al enlace de "Volver" y "Evaluar"
         const volverFisioterapiaLink = document.getElementById("volver-fisioterapia");
         const evaluarEjercicioLink = document.getElementById("evaluar-ejercicio");
 
