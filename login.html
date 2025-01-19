@@ -11,7 +11,7 @@
         <!-- Encabezado con íconos -->
         <header>
             <div class="icon-container">
-                <a href="ajustes.html"><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" class="icon"></a>
+                <a href=""><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" class="icon"></a>
                 <h1>SaludTotal</h1>
                 <img src="Fotos/Logo_DCU.png" alt="Inicio" class="icon">
             </div>
@@ -25,7 +25,7 @@
                     <button class="active">Paciente</button>
                     <button>Doctor</button>
                 </div>
-                <form>
+                <form onsubmit=CheckAndSend()>
                     <div class="form-group">
                         <label for="email">Correo electrónico</label>
                         <input type="email" id="email" placeholder="nombre@servicio.extension">
@@ -37,7 +37,7 @@
                     <div class="forgot-password">
                         <a href="#">Has olvidado tu contraseña?</a>
                     </div>
-                    <div class="button-container" onsubmit=CheckAndSend()>
+                    <div class="button-container">
                         <button type="submit" class="button">Iniciar sesión</button>
                     </div>
                 </form>
@@ -56,7 +56,29 @@
         });
 
         function CheckAndSend(){
+            // Evitar que el formulario se envíe automáticamente
+            event.preventDefault();
             
+            // Seleccionar el botón activo
+            const activeTab = document.querySelector('.tab-container button.active');
+
+            // Obtener el texto del botón activo para identificar si es "Paciente" o "Doctor"
+            const userType = activeTab ? activeTab.textContent.trim().toLowerCase() : '';
+
+            // Crear el span dinámicamente
+            const span = document.createElement('span');
+            span.className = 'dirección';
+            
+            // Determinar la dirección según el usuario seleccionado
+            if (userType === 'doctor') {
+                span.textContent = 'fisio';
+            } else {
+                span.textContent = ''; // Vacío si es paciente
+            }
+            
+            // Crear la dirección de la página con el span
+            const nextPage = `inicio${span.textContent}.html`;
+            window.location.href = nextPage;
         }
     </script>
 </body>
