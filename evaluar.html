@@ -19,18 +19,33 @@
         
         <!-- Contenido principal -->
         <main>
+            <div class="exercise-card">
+                <h2>Ejercicios</h2>
+                <div class="exercise-content">
+                    <p>Extension de lumbares</p>
+                    <img src="Fotos/Ejercicio_Extension.gif" alt="Ejercicio" class="exercise-image">
+                </div>
+            </div>
             <div class="evaluation-card">
                 <h2>Evaluar Ejercicio</h2>
+                <p>Series:</p>
+                <!-- Barra de evaluación -->
+                <input type="range" id="series" name="series" min="1" max="3" value="1">
+                <p>Valor seleccionado: <span id="series-value">1</span></p>
+                <p>Repeticiones:</p>
+                <!-- Barra de evaluación -->
+                <input type="range" id="repes" name="repes" min="1" max="10" value="1">
+                <p>Valor seleccionado: <span id="repes-value">1</span></p>
                 <p>Califica el nivel de dolor:</p>
                 <!-- Barra de evaluación -->
-                <input type="range" id="pain-level" name="pain-level" min="1" max="5" value="3">
-                <p>Valor seleccionado: <span id="pain-value">3</span></p>
+                <input type="range" id="pain-level" name="pain-level" min="1" max="5" value="1">
+                <p>Valor seleccionado: <span id="pain-value">1</span></p>
             </div>
 
             <!-- Botones de navegación -->
             <div class="button-container">
                 <a id="volver-ejercicios" href="ejercicios.html" class="nav-button">Volver</a>
-                <a id="hecho" href="fisioterapia.html" class="done-button">Hecho</a>
+                <a id="hecho" href="inicio.html" class="done-button">Hecho</a>
             </div>
         </main>
     </div>
@@ -42,14 +57,26 @@
 
         // Actualizar enlaces con la fecha
         const volverEjerciciosLink = document.getElementById("volver-ejercicios");
-        const hechoLink = document.getElementById("hecho");
-
+        
         if (date) {
             volverEjerciciosLink.href += `?date=${encodeURIComponent(date)}`;
-            hechoLink.href += `?date=${encodeURIComponent(date)}`;
         }
 
         // Mostrar el valor de la barra de rango
+        const series = document.getElementById("series");
+        const seriesValue = document.getElementById("series-value");
+
+        series.addEventListener("input", () => {
+            seriesValue.textContent = series.value;
+        });
+
+        const repes = document.getElementById("repes");
+        const repesValue = document.getElementById("repes-value");
+
+        repes.addEventListener("input", () => {
+            repesValue.textContent = repes.value;
+        });
+
         const painLevel = document.getElementById("pain-level");
         const painValue = document.getElementById("pain-value");
 
