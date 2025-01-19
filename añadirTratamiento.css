@@ -86,7 +86,7 @@ h2 {
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin: 10px 40px 20px 40px;
+  margin: 10px 40px 10px 40px;
 }
 
 .button {
@@ -127,5 +127,22 @@ input[type="file"] {
 .button-container-volver {
   display: flex;
   justify-content: center;
-  margin: 10px 40px;
+  margin: 0px 40px -1px 40px;
+}
+
+.done-button {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #28a745;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.done-button:hover {
+  background-color: #218838;
 }

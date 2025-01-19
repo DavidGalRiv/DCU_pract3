@@ -88,15 +88,17 @@ h2 {
 }
 
 .button {
-  padding: 10px 20px;
-  text-decoration: none;
-  color: white;
-  background-color: #007bff;
-  border-radius: 5px;
-  font-size: 14px;
-  width: 100%;
+  display: block;
   text-align: center;
-  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 45%;
+  margin-right: 1%;
 }
 
 .button:hover {
@@ -111,7 +113,7 @@ h3 {
     display: flex;
     gap: 16px;
     justify-content: center;
-    margin: 10px 40px 20px 40px;
+    margin: 10px 40px 10px 40px;
 }
 
 .navigation {
@@ -119,4 +121,11 @@ h3 {
     gap: 16px;
     justify-content: center;
     margin: 10px 40px 20px 40px;
+}
+
+.button-container-volver {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 2%;
 }

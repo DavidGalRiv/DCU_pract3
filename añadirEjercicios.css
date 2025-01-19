@@ -86,21 +86,34 @@ h2 {
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin: 10px 40px 20px 40px;
+  margin: 10px 40px 10px 40px;
 }
 
 .button {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 45%;
+  margin-right: 1%;
+}
+
+.done-button {
   padding: 10px 20px;
   text-decoration: none;
   color: white;
-  background-color:  #007bff;
+  background-color: #28a745;
+  display: block;
+  text-align: center;
   border-radius: 5px;
   font-size: 14px;
+  transition: background-color 0.3s;
   width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 .button:hover {
@@ -108,17 +121,17 @@ h2 {
 }
 
 .upload-button {
-  padding: 10px 20px;
-  text-decoration: none;
-  color: white;
-  background-color:  #007bff;
-  border-radius: 5px;
-  font-size: 14px;
-  width: 100%;
+  display: block;
   text-align: center;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-right: 1%;
   cursor: pointer;
 }
 .upload-button:hover {
@@ -132,4 +145,11 @@ input[type="file"] {
   display: flex;
   justify-content: center;
   margin: 10px 70px 20px 70px;
+}
+
+.button-container-volver {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 2%;
 }
