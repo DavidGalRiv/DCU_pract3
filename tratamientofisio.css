@@ -84,14 +84,16 @@ body {
   
   .button-container {
     display: flex;
+    gap: 16px;
     justify-content: center;
-  }
+    margin: 10px 40px 20px 40px;
+}
   
   .button {
     padding: 10px 20px;
     text-decoration: none;
     color: white;
-    background-color: #28a745;
+    background-color:  #007bff;
     border-radius: 5px;
     font-size: 14px;
     width: 100%;
@@ -100,5 +102,24 @@ body {
   }
   
   .button:hover {
-    background-color: #218838;
+    background-color: #005bb5;
   }
+
+  .upload-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color:  #007bff;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.upload-button:hover {
+    background-color: #0056b3;
+}
+input[type="file"] {
+    display: none; 
+}

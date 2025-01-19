@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="añadirEjercicios.css" rel="stylesheet" type="text/css">
+    <title>SaludTotal - Tratamiento</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Encabezado -->
+        <header>
+            <div class="icon-container">
+                <a href="ajustes.html"><img src="Fotos/Logo_Ajustes.png" alt="Ajustes" class="icon"></a>
+                <h1>SaludTotal</h1>
+                <a href="inicio.html"><img src="Fotos/Logo_DCU.png" alt="Inicio" class="icon"></a>
+            </div>
+        </header>
+
+        <!-- Contenido principal -->
+        <main>
+            <div class="profile">
+                <img src="Fotos/Paciente.png" alt="Perfil">
+                <div class="profile-info">Juan Blanco Ruiz</div>
+            </div>
+            <h2>Ejercicios</h2>
+
+            <div class="gif">
+            <label for="upload" class="upload-button">Añadir gif</label>
+            <input type="file" id="upload" name="Video" accept=".png, .jpg, .gif">
+            </div>
+
+            <div class="medication-list">
+                <div class="medication">
+                    <input type="text" style="width: 300px; height: 40px;" placeholder="Nombre Ejercicio">
+                </div>
+
+                <div class="medication">
+                    <input type="text" style="width: 300px; height: 40px;" placeholder="Explicación">
+                </div>
+
+                <div class="medication">
+                    <input type="text" style="width: 300px; height: 40px;" placeholder="Días de ejercicio">
+                </div>
+            </div>
+            <div class="button-container">
+                <label for="upload" class="upload-button">Videotutorial</label>
+                <input type="file" id="upload" name="Video" accept=".mp4">
+                <a href="ejerciciosFisio.html" class="button">Guardar</a>
+            </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
