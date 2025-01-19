@@ -19,8 +19,8 @@
 
         <!-- Contenido principal -->
         <div class="profile">
-            <img src="Fotos/Paciente.png" alt="Perfil">
-            <div class="profile-info">Juan Blanco Ruiz</div>
+            <img src="Fotos/Medico.png" alt="Perfil">
+            <div class="profile-info">Ana Martínez López</div>
         </div>
         <div class="calendar">
             <h2>Julio</h2>
@@ -51,12 +51,12 @@
         <div class="appointments">
             <div class="appointment" onclick="goToPhysiotherapy('14 Julio 2024 - 10:30')">
                 <strong>FISIOTERAPIA</strong><br>
-                Ana Martínez López<br>
+                Juan Blanco Ruíz<br>
                 14 Julio 2024 - 10:30
             </div>
             <div class="appointment" onclick="goToPhysiotherapy('28 Julio 2024 - 10:30')">
                 <strong>FISIOTERAPIA</strong><br>
-                Ana Martínez López<br>
+                Juan Blanco Ruíz<br>
                 28 Julio 2024 - 10:30
             </div>
         </div>
@@ -65,7 +65,7 @@
  <script>
         function goToPhysiotherapy(date) {
             // Redirigir a la página de fisioterapia con la fecha seleccionada en la URL
-            window.location.href = `fisioterapia.html?date=${encodeURIComponent(date)}`;
+            window.location.href = `historial.html?date=${encodeURIComponent(date)}`;
         }
     </script>
 </body>
